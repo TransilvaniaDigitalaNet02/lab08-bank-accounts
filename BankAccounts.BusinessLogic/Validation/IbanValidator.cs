@@ -1,4 +1,4 @@
-﻿namespace BankAccounts.BusinessLogic
+﻿namespace BankAccounts.BusinessLogic.Validation
 {
     internal static class IbanValidator
     {

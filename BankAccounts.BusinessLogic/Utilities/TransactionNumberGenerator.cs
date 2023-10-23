@@ -1,4 +1,4 @@
-﻿namespace BankAccounts.BusinessLogic
+﻿namespace BankAccounts.BusinessLogic.Utilities
 {
     internal static class TransactionNumberGenerator
     {

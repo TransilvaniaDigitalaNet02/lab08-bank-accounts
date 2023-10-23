@@ -1,4 +1,7 @@
-﻿namespace BankAccounts.BusinessLogic
+﻿using BankAccounts.BusinessLogic.Utilities;
+using BankAccounts.BusinessLogic.Validation;
+
+namespace BankAccounts.BusinessLogic
 {
     public class Account
     {
@@ -9,6 +12,13 @@
         {
             PersonValidator.ValidatePersonName(owner);
             IbanValidator.ValidateIban(iban);
+
+            if (initialDeposit < 0)
+            {
+                throw new ArgumentException(
+                    "Initial deposit must be greater than or equal to zero.",
+                    nameof(initialDeposit));
+            }
 
             Owner = owner;
             Iban = iban;

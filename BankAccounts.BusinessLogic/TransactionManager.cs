@@ -1,4 +1,6 @@
-﻿namespace BankAccounts.BusinessLogic
+﻿using BankAccounts.BusinessLogic.Utilities;
+
+namespace BankAccounts.BusinessLogic
 {
     public static class TransactionManager
     {
@@ -16,6 +18,12 @@
             if (receivingAccount is null)
             {
                 throw new ArgumentNullException(nameof(receivingAccount));
+            }
+
+            if (amount < 0)
+            {
+                throw new ArgumentException($"Amount must be greater than, or equal to zero",
+                    nameof(amount));
             }
 
             if (payingAccount.CurrentAmount < amount)

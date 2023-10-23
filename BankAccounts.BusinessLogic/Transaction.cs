@@ -1,4 +1,6 @@
-﻿namespace BankAccounts.BusinessLogic
+﻿using BankAccounts.BusinessLogic.Validation;
+
+namespace BankAccounts.BusinessLogic
 {
     public class Transaction
     {

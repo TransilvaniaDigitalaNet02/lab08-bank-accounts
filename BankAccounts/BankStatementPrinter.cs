@@ -12,22 +12,22 @@ namespace BankAccounts
                 return;
             }
 
-            string timestampLabel = nameof(BankStatement.BankStatementItem.Timestamp);
+            string timestampLabel = nameof(BankStatementItem.Timestamp);
             const int timestampLabelWidth = 10;
 
-            string transactionTypeLabel = nameof(BankStatement.BankStatementItem.TransactionType);
+            string transactionTypeLabel = nameof(BankStatementItem.TransactionType);
             const int transactionTypeLabelWidth = 15;
 
-            string counterpartyLabel = nameof(BankStatement.BankStatementItem.Counterparty);
+            string counterpartyLabel = nameof(BankStatementItem.Counterparty);
             const int counterpartyLabelWidth = 25;
 
-            string amountBeforeLabel = nameof(BankStatement.BankStatementItem.AmountBefore);
+            string amountBeforeLabel = nameof(BankStatementItem.AmountBefore);
             const int amountBeforeLabelWidth = 18;
 
-            string transactionAmoutLabel = nameof(BankStatement.BankStatementItem.TransactionAmout);
+            string transactionAmoutLabel = nameof(BankStatementItem.TransactionAmout);
             const int transactionAmoutLabelWidth = 18;
 
-            string amountAfterLabel = nameof(BankStatement.BankStatementItem.AmountAfter);
+            string amountAfterLabel = nameof(BankStatementItem.AmountAfter);
             const int amountAfterLabelWidth = 18;
 
             string tableHeader = $"{timestampLabel,timestampLabelWidth} | " +
@@ -54,7 +54,7 @@ namespace BankAccounts
             Console.WriteLine(tableHeader);
             Console.WriteLine(separator);
 
-            foreach (BankStatement.BankStatementItem item in statement.Items)
+            foreach (BankStatementItem item in statement.Items)
             {
                 Console.WriteLine($"{item.Timestamp, timestampLabelWidth:yyyy-MM-dd} | " +
                                   $"{item.TransactionType, transactionTypeLabelWidth} | " +
